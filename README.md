@@ -1,7 +1,7 @@
 
-# Explorando Banco de Dados Relacional, Não Relacional e Normalização
+# Explorando Banco de Dados Relacional, Não Relacional e Normalização 📖 
 
-## Banco de dados **Relacional**. 
+## Banco de dados **Relacional**. 🟩
 
 - Um banco de dados relacional é um sistema que organiza dados em tabelas interconectadas. Cada tabela tem colunas e linhas, e a principal característica desse modelo é a forma como ele estabelece e gerencia as relações entre essas tabelas.
 
@@ -21,11 +21,11 @@
 
 - Com essa estrutura, se você quiser encontrar todos os livros de um autor específico, não precisa procurar o nome dele em cada linha da tabela de livros. Você simplesmente usa a chave estrangeira ID_Autor para vincular as duas tabelas e obter as informações de forma rápida e precisa.
 
-## Banco de dados **Não relacional**. 
+## Banco de dados **Não relacional**. 🟥
 
 - Um banco de dados não relacional, ou NoSQL, é um sistema que armazena dados de forma flexível, sem o uso de tabelas e relações rígidas como no modelo relacional. Em vez disso, ele organiza os dados em estruturas mais dinâmicas, como documentos.
 
-### Exemplo de uso: Perfil em uma rede social.
+### Exemplo de uso: Perfil em uma rede social.💻
 
 - Imagine uma rede social onde cada usuário tem um perfil com diversas informações. Em vez de espalhar esses dados por várias tabelas (uma para dados pessoais, outra para fotos, outra para postagens, etc.), um banco de dados não relacional pode armazenar todas as informações de um usuário em um único "documento".
 ### Exemplo em **JSON**:
@@ -55,7 +55,7 @@
   ]
 }
 ```
-### Exemplo de tabela não normalizada
+### Exemplo de tabela não normalizada 🖥️
 
 |Pedido_id|Cliente_Nome|Cliente_endereço|Produto_id|Produto_Nome|Quantidade|Preço_Total|
 |------------|----------------|-------------------|------------|-----------------|-------------|-----------|
@@ -63,7 +63,7 @@
 |1|Tiago|Rua B,124|11|Caneleira|2|R$50,00|
 |2|Gabriel|AV. C,125|12|Chuteira|2|R$600,00|
 
-## Oque é **Normalização** e qual seu objetivo?
+## Oque é **Normalização** e qual seu objetivo?🆗
 
 - A Normalização é um processo de organização de dados em um banco de dados relacional. Seu objetivo é dividir tabelas grandes em tabelas menores e mais coesas para:
 
@@ -83,7 +83,7 @@
 
 ## Exemplo de tabela **Normalizadas**.
 
-## **1FN**
+## **1FN** 🥇
 
 A 1FN garante que cada célula contenha apenas um valor atômico (indivisível). Para isso, a tabela Pedidos original, que tinha vários produtos em uma única linha, é transformada em uma tabela onde cada linha representa a combinação de um pedido com um produto.
 
@@ -95,7 +95,7 @@ A 1FN garante que cada célula contenha apenas um valor atômico (indivisível).
 | 1         | 05/08/2025 | Leo        | Rua A,10         | 102        | Calça        | R$120,00       | 1          |   
 | 2         | 05/08/2025 | Tiago      | Rua B,25         | 103        | Tenis        | R$200,00       | 1          
          
-## **2FN**
+## **2FN**🥈
 
 A 2FN exige que a tabela esteja na 1FN e que todos os atributos não-chave dependam integralmente da chave primária composta. Para isso, os dados que dependem apenas de parte da chave são movidos para novas tabelas.
 
@@ -114,7 +114,7 @@ Aqui, separamos as informações do cliente e dos produtos em suas próprias tab
 | 2         | 103        | Tenis        | R$200,00       | 1          |   
 
 
-## **3FN**
+## **3FN** 🥉
 
 A 3FN exige que a tabela esteja na 2FN e que não haja dependências transitivas, ou seja, nenhum atributo não-chave pode depender de outro atributo não-chave.
 
